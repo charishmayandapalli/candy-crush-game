@@ -1,0 +1,105 @@
+/* Base Grid Styles */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  height: 560px;
+  width: 560px;
+  background-color: rgba(109, 127, 151, 0.9);
+  padding: 5px;
+  color: #85796b;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+  position: absolute;
+  top: 37%; /* Increase the value to move the grid further down */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+
+.grid div {
+  height: 70px;
+  width: 70px;
+}
+
+/* Scoreboard */
+.scoreBoard {
+  background-color: rgb(245, 89, 89);
+  border-radius: 20px;
+  width: 15%;
+  height: 80px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h3, h1 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+
+/* Body Background */
+body {
+  background-image: url('background.jpg');
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .grid {
+      height: 400px;
+      width: 400px;
+  }
+
+  .grid div {
+      height: 50px;
+      width: 50px;
+  }
+
+  .scoreBoard {
+      width: 25%;
+      height: 60px;
+      font-size: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+      height: 300px;
+      width: 300px;
+  }
+
+  .grid div {
+      height: 35px;
+      width: 35px;
+  }
+
+  .scoreBoard {
+      width: 35%;
+      height: 50px;
+      font-size: 10px;
+      padding: 10px;
+  }
+
+  h1 {
+      font-size: 20px;
+  }
+
+  h3 {
+      font-size: 12px;
+  }
+}
